@@ -97,7 +97,7 @@ function SocketHelper() {
    * @important 'this' in this function refers to the webSocket object
    */
   SocketHelper.prototype.close = function(evt) {
-    this.close;
+    this.close();
   }
 
   /**
