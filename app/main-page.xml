@@ -2,6 +2,7 @@
   <StackLayout>
     <Label text="Tap the button" class="title"/>
     <Button text="TAP" tap="{{ onTap }}" />
+    <Button text="SOCKET" tap="{{ onSocket }}" />
     <Label text="{{ message }}" class="message" textWrap="true"/>
   </StackLayout>
 </Page>

@@ -1,4 +1,6 @@
+'use strict';
 var Observable = require("data/observable").Observable;
+var SocketHelper = require('./socket-helper').SocketHelper;
 
 function getMessage(counter) {
     if (counter <= 0) {
@@ -16,6 +18,14 @@ function createViewModel() {
     viewModel.onTap = function() {
         this.counter--;
         this.set("message", getMessage(this.counter));
+    }
+
+    var socketHelper = new SocketHelper();
+    socketHelper.bootstrap();
+
+    viewModel.onSocket = function() {
+      console.log('onSocket: ');
+      //webSocket.send("hello from nativescript");
     }
 
     return viewModel;
